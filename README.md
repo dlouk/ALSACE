@@ -22,3 +22,6 @@ C++/Python library.
 - Open TURNS: An industrial software for uncertainty quantification in 
 simulation, https://arxiv.org/abs/1501.05242 
 --------------------------------------------------------------------------------
+ Option "AI": Sequential Experimental Designs based on A/I-optimality criteria
+ Option "K": Sequential Experimental Designs based on K-optimality criteria
+ Option "E": Sequential Experimental Designs based on E-optimality criteria
