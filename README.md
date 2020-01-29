@@ -1,4 +1,4 @@
-Approximations via Lower-Set Least-Squares Adaptive Chaos Expansions 
+Approximations via (lower-set) Least-Squares Adaptive Chaos Expansions 
 (ALSACE)
 
 --------------------------------------------------------------------------------
