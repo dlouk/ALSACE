@@ -52,18 +52,9 @@ def alsace(func, N, jpdf, tol=1e-22, sample_type='R', limit_cond=5,
         # create orthogonal univariate bases
         poly_collection = ot.PolynomialFamilyCollection(N)
         for i in range(N):
-            if dist_types[i] == 'Uniform':
-                poly_collection[i] = ot.OrthogonalUniVariatePolynomialFamily(ot.LegendreFactory())
-            elif dist_types[i] == 'Normal':
-                poly_collection[i] = ot.OrthogonalUniVariatePolynomialFamily(ot.HermiteFactory())
-            elif dist_types[i] == 'Beta':
-                poly_collection[i] = ot.OrthogonalUniVariatePolynomialFamily(ot.JacobiFactory())
-            elif dist_types[i] == 'Gamma':
-                poly_collection[i] = ot.OrthogonalUniVariatePolynomialFamily(ot.LaguerreFactory())
-            else:
-                pdf = jpdf.getDistributionCollection()[i]
-                algo = ot.AdaptiveStieltjesAlgorithm(pdf)
-                poly_collection[i] = ot.StandardDistributionPolynomialFactory(algo)
+            pdf = jpdf.getDistributionCollection()[i]
+            algo = ot.AdaptiveStieltjesAlgorithm(pdf)
+            poly_collection[i] = ot.StandardDistributionPolynomialFactory(algo)
 
         # create multivariate basis
         mv_basis = ot.OrthogonalProductPolynomialFactory(poly_collection,
