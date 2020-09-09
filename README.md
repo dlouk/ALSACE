@@ -12,12 +12,12 @@ Dimitrios Loukrezis (loukrezis@temf.tu-darmstadt.de)
 --------------------------------------------------------------------------------
 
 ALSACE is a Python software for multivariate approximation based on polynomial 
-chaos expansions (PCs). The PC coefficients are computed using least squares 
-(LS) regression. The PC polynomial basis as well as the experimental design used
-in the LS problem are expanded adaptively by exploiting parameter anisotropies 
-and LS stability estimates. The software has been developed as part of our work 
-at the Institute for Accelerator Science and Electromagnetic Fields (TEMF) of TU 
-Darmstadt. 
+chaos expansions (PCEs). The PCE coefficients are computed using least squares 
+(LS) regression. The PCE polynomial basis as well as the experimental design 
+used in the LS problem are expanded adaptively by exploiting parameter 
+anisotropies and LS stability estimates. The software has been developed as part 
+of our work at the Institute for Accelerator Science and Electromagnetic Fields 
+(TEMF) of the Technische Universität Darmstadt. 
 
 --------------------------------------------------------------------------------
 
