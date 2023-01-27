@@ -174,7 +174,9 @@ class PCE_Surrogate():
 
         # create multivariate basis
         multivariate_basis = ot.OrthogonalProductPolynomialFactory(
-                              poly_collection, ot.EnumerateFunction(self.N))
+                                  poly_collection, 
+                                  ot.LinearEnumerateFunction(self.N)
+                                  )
         # get enumerate function (multi-index handling)
         enum_func = multivariate_basis.getEnumerateFunction()
         # get epansion

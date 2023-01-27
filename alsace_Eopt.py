@@ -57,8 +57,10 @@ def alsace(func, N, jpdf, tol=1e-22, sample_type='R', limit_cond=100,
             poly_collection[i] = ot.StandardDistributionPolynomialFactory(algo)
 
         # create multivariate basis
-        mv_basis = ot.OrthogonalProductPolynomialFactory(poly_collection,
-                                                        ot.EnumerateFunction(N))
+        mv_basis = ot.OrthogonalProductPolynomialFactory(
+                        poly_collection,
+                        ot.LinearEnumerateFunction(N)
+                        )
         # get enumerate function (multi-index handling)
         enum_func = mv_basis.getEnumerateFunction()
 

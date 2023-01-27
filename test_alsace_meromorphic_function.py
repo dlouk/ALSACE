@@ -14,16 +14,6 @@ import openturns as ot
 from alsace_Kopt import alsace
 from tools import get_ed, compute_moments, PCE_Surrogate
 
-# function to be approximated
-#def f(yvec):
-#    """Meromorphic function"""
-#    gvec_tilde = np.array([1e0, 5*1e-1, 1e-1, 5*1e-2, 1e-2, 5*1e-3, 1e-3,
-#                           5*1e-4, 1e-4, 5*1e-5, 1e-5, 5*1e-6, 1e-6, 5*1e-7,
-#                           1e-7, 5*1e-8])
-#    coeff = 1.0 / (2.0*np.linalg.norm(gvec_tilde, ord=1))
-#    gvec = gvec_tilde * coeff
-#    dotprod = np.dot(gvec, yvec)
-#    return 1.0/(1 + dotprod)
 
 def qoi_mero(yvec):
     """Meromorphic function"""
@@ -48,7 +38,7 @@ for i in range(N):
 jpdf = ot.ComposedDistribution(z)
 
 # generate cross-validation set
-Ncv = 100000
+Ncv = 1000
 ot.RandomGenerator.SetSeed(13)
 cv_test_points, cv_values = get_ed(qoi_mero, jpdf, Ncv, 'R')
 
